@@ -1,0 +1,26 @@
+adicionar query parameters nos endpoints
+  atleta
+    nome
+    cpf
+customizar response de retorno de endpoints
+  get all
+    atleta
+      nome
+      centro_treinamento
+      categoria
+manipular exceção de integridade de dados
+  sqlalchemy.exc.IntegrityError e devolver a seguinte mensagem: "Já existe um atleta cadastrado com o cpf: ?"
+adicionar paginação utilizando a lib: fastapi-pagination
+  limit
+  offset
+
+
+comando no terminal
+  executar o servidor:
+    uvicorn main:app --reload
+
+  criando uma migração:
+    PYTHONPATH=$PYTHONPATH:$(pwd) alembic revision --autogenerate -m $(d)
+
+  rodando uma migração:
+    PYTHONPATH=$PYTHONPATH:$(pwd) alembic upgrade head
